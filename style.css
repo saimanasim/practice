@@ -45,4 +45,67 @@ navbar{
 }
 .about img{
     box-shadow:  0 1rem 3rem rgba(black, .175);
+    width: 400px;
 }
+.about p{
+    color: gray;
+}
+h1{
+    font-size: 3rem;
+    font-weight: 900 ;
+}
+
+
+
+
+.btn1{
+    height: 40px;
+    width: 145px;
+    outline: none;
+    border: none;
+    background-color: black;
+    color: white;
+    border-radius: 4px;
+    margin: 10px;
+}
+.btn1:hover{
+    background-color: transparent;
+    color: black;
+    border: 1px solid black;
+    transition: 0.5s;
+
+}
+.card{
+    border: none;
+    outline: none;
+    -webkit-box-shadow: -8px 6px 89px -65px rgba(0,0,0,0.75);
+    -moz-box-shadow: -8px 6px 89px -65px rgba(0,0,0,0.75);
+   box-shadow: -8px 6px 89px -65px rgba(0,0,0,0.75);
+}
+.card p{
+    color: gray;
+}
+.circle{
+    height: 70px;
+    width: 70px;
+    background-color: lightgray;
+    color: black;
+    font-size: 30px;
+    border-radius: 50%;
+    padding: 12px;
+    display: inline-block;
+    margin-bottom:20px ;
+}
+.card:hover .circle{
+    background-color: black;
+    color: white;
+    transition: 0.5s;
+
+}
+
+.circle:hover{
+    background-color: black;
+    color: white;
+     transition: 0.4s;
+}
+
