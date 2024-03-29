@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverse Geocoding</title>
+</head>
+<body>
+    <button>Get Current Location</button>
+
+    <script>
+        const button = document.querySelector('button');
+
+        button.addEventListener('click', () => {
+            navigator.geolocation.getCurrentPosition((position) => {
+                const { latitude, longitude } = position.coords;
+
+                fetch(`https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${latitude}&longitude=${longitude}`)
+                    .then((res) => res.json())
+                    .then((data) => {
+                        console.table(data);
+                    })
+                    .catch(() => {
+                        console.log('Error fetching data from API');
+                    });
+            });
+        });
+    </script>
+</body>
+</html>
